@@ -1,0 +1,161 @@
+<head>
+  <title>Radioactivity iLabs Experiment</title>
+</head>
+
+<body>
+  <div class="header"> 
+    <a href="http://www.uq.edu.au">
+      <img src="/images/uqLogo.gif"/>
+    </a>
+    <h2>Radioactivity iLabs Experiment</h2>
+  </div>
+  <div id="content">
+    <div id="leftSideColumn">
+      <div id="experimentDiv">
+        <legend>Experiment</legend>
+        {{> experiment}}
+        <div id="typeDiv">Please choose an experiment above</div>
+      </div>
+    </div>
+    <div id="rightSideColumn">
+      <div id="chatDiv">
+        {{> chatWindow}}
+      </div>
+      <div id="liveFeedDiv">
+        <legend>Live Feed</legend>
+        <img src="/images/iLabCapture.jpg"/ style="width: 400px;">
+      </div>
+    </div>
+  </div>
+  {{> footer}}
+</body>
+
+<template name="experiment">
+  <form class="form-inline" onsubmit="return false">
+    <select id="experimentType" value={{type}}>
+      <option value="none">Select an Experiment</option>
+      <option value="timeExperiment">Radioactivity vs Time</option>
+      <option value="distanceExperiment">Radioactivity vs Distance</option>
+    </select>
+    <button id="experimentTypeSubmit">Submit</button>
+  </form>
+</template>
+
+<template name="distanceExperiment">
+  <p style="width: 500px">What is the relationship between radioactive emmissions and the detection distance? Choose the number of trails you wish to run, and the distance of the Geiger counter from the source in each of those trials.</p>
+  <h5>Number of trials:</h5>
+  <div style="position: relative; left: 10px;">
+    <form class="form-inline" onsubmit="return false">
+      <input type="text" class="inputNumber" value="{{distances}}" id="incdecDistances" />
+      <button id="upDistances" ><i class="icon-search icon-chevron-up"></i></button>
+      <button id="downDistances" ><i class="icon-search icon-chevron-down"></i></button> 
+      <button class="submitDistances" id="submitDistances">Submit</button>
+    </form>
+    </br>
+  </div>
+  {{> displayDistances}}
+</template>
+
+<template name="displayDistances">
+  {{#if chooseDistances}}
+    <legend>Trials</legend>
+  {{/if}}
+  <div style="position: relative; left: 10px;">
+    {{#each chooseDistances}}
+      {{> distanceProgressBar}}
+    {{/each}}
+  </div>
+  {{#if chooseDistances}}
+    <br/>
+    <input type="button" class="btn btn-success" value="Submit Experiment" style="float: right; position: relative; left: -1em;"/>
+  {{/if}}
+</template>
+
+<template name="distanceProgressBar">
+  <div class="well well-small">
+    <h4>Trial no.{{_id}}</h4>
+    <div class="progress progress-striped progressCanvas" style="border: 1px solid #000000; height: 18px; width: {{width}}px;">
+     <div class="bar distanceProgress" id="distanceProgress{{_id}}" style="width: {{distanceWidth}}%; height: 18px;">
+      <p align="right">{{distance}}</p>
+    </div>
+    </div>
+    <form class="form-inline" onsubmit="return false">
+      <input type="text" class="inputNumber inputDistance" id="inputDistance{{_id}}" onkeydown="if (event.keyCode == 13) document.getElementById('distanceButton{{_id}}').click()"/>
+      <input type="button" value="Enter" id="distanceButton{{_id}}" class="distanceButton"/>
+    </form>
+  </div>
+</template>
+
+<template name="timeExperiment">
+  <p style="width: 500px">What is the relationship between radioactive emmisions and the detection time? Choose the number of trials you wish to run, and how long you want the Geiger counter to measure radiation in each of those trials.</p>
+  <h5>Number of trials:</h5>
+  <div style="position: relative; left: 10px;">
+    <form class="form-inline" onsubmit="return false">
+      <input type="text" class="inputNumber" value="{{times}}" id="incdecTimes" />
+      <button id="upTimes" ><i class="icon-search icon-chevron-up"></i></button>
+      <button id="downTimes" ><i class="icon-search icon-chevron-down"></i></button> 
+      <button id="submitTimes">Submit</button>
+    </form>
+    </br>
+  </div>
+  {{> displayTimes}}
+</template>
+
+<template name="displayTimes">
+  {{#if chooseTimes}}
+    <legend>Trials</legend>
+  {{/if}}
+  <div style="position: relative; left: 10px;">
+    {{#each chooseTimes}}
+      {{> timeProgressBar}}
+    {{/each}}
+  </div>
+  {{#if chooseTimes}}
+    <br/>
+    <input type="button" class="btn btn-success" value="Submit Experiment" style="float: right; position: relative; left: -1em;"/>
+  {{/if}}
+</template>
+
+<template name="timeProgressBar">
+  <div class="well well-small">
+    <h4>Trial no.{{_id}}</h4>
+    <div class="progress progress-striped progressCanvas" style="border: 1px solid #000000; height: 18px; width: {{width}}px">
+     <div class="bar timeProgress" id="timeProgress{{_id}}" style="width: {{timeWidth}}%; height: 18px;">
+      <p align="right">{{time}}</p>
+    </div>
+    </div>
+    <form class="form-inline" onsubmit="return false">
+      <input type="text" class="inputNumber inputTime" id="inputTime{{_id}}" onkeydown="if (event.keyCode == 13) document.getElementById('timeButton{{_id}}').click()"/>
+      <input type="button" value="Enter" id="timeButton{{_id}}" class="timeButton"/>
+    </form>
+  </div>
+</template>
+
+<template name="chatWindow">
+  <legend>Chat</legend>
+  <form class="form-inline" style="margin-bottom: 1px;" onsubmit="return false">
+    Name: 
+    <input type="text" id="name"/> 
+  </form>
+  <div id="recordOfMessages">
+    {{#each messages}}
+      {{message}}
+      <br/>
+    {{/each}}
+  </div>
+  <form class="form-inline" style="margin-top: 1px;" onsubmit="return false">
+    Message: 
+    <input type="text" id="message" onkeydown="if (event.keyCode == 13) document.getElementById('sendMessage').click()"/> 
+    <input type="button" id="sendMessage" value="Send" />
+  </form>
+</template>
+
+<template name="footer">
+  <div id="footer">
+    <a href="http://ceit.uq.edu.au" style="position: relative; top: 1em;" >
+      <img src="/images/CEITFooter.png"/>
+    </a>
+    <p>Created by <a href="http://ceit.uq.edu.au/users/uqjbaili">James Bailie</a> at <a href="http://ceit.uq.edu.au">CEIT</a> 2014</p>
+  </div>
+</template>
+
