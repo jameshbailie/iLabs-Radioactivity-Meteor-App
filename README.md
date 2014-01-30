@@ -16,5 +16,4 @@ ceit.uq.edu.au/users/uqjbaili
 - Meteorite
 - Meteor Streams
 - Bootstrap v2.3.2 Meteor Package
-
 - Remove insecure package from Meteor app (added by default).
