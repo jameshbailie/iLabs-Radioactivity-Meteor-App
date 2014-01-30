@@ -1,0 +1,99 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid4\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2880\lin2880 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid5\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li3600\lin3600 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \ul \ulc0 Overview:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 \ulnone {\listtext	\uc0\u8259 	}File structure overview:\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Everything in the 'public' folder gets served to the client. The client is directed to the 'client' folder when it connects. The 'server' folder doesn't get served to the client (this folder could also be called 'private'). The 'packages' folder contains additional packages from Atmosphere. See http://docs.meteor.com/#structuringyourapp.\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}Why I did what I did and why I used what I used:\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Why did I use Meteor?\
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Fairly easy to use.\
+{\listtext	\uc0\u8259 	}Good documentation + support.\
+{\listtext	\uc0\u8259 	}Up and coming application.\
+{\listtext	\uc0\u8259 	}Does almost exactly what a DCI needs, and does it automatically for you.\
+{\listtext	\uc0\u8259 	}What are the disadvantages of Meteor?\
+\pard\tx2380\tx2880\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2880\fi-2880\pardirnatural
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}It's high level - you can't access things at the lower level.\
+{\listtext	\uc0\u8259 	}Not traditional web development - don't have full access of HTML page, some things don't work as expected.\
+{\listtext	\uc0\u8259 	}It is not version 1.0.\
+{\listtext	\uc0\u8259 	}Stuck in a particular framework. Must use MongoDB. Cannot add node.js packages.\
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}What else could I have used?\
+\pard\tx2380\tx2880\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2880\fi-2880\pardirnatural
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}node.js and packages: bone.io, socket.io etc.\
+{\listtext	\uc0\u8259 	}This would have been a lower level approach and I would have needed to write code for things Meteor does for me.\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}More specific questions:\
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}What are the \{\{ \}\} braces in the HTML?\
+\pard\tx2380\tx2880\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2880\fi-2880\pardirnatural
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}\{\{ some content \}\} is a Handlebar expression (http://handlebarsjs.com)\
+\pard\tx3100\tx3600\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li3600\fi-3600\pardirnatural
+\ls1\ilvl4\cf0 {\listtext	\uc0\u8259 	}\{\{> templateName\}\} is a template expression. It tells Meteor where to place the template 'templateName' in the DOM.\
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Why did I define both the time and experiment template methods separately?\
+\pard\tx2380\tx2880\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2880\fi-2880\pardirnatural
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Basically because I didn't find the time to write higher level functions that define both sets of methods. This is something that should be fixed.\
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Why do I use so many templates?\
+\pard\tx2380\tx2880\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2880\fi-2880\pardirnatural
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Check out the handlebars and Meteor docs for more information about templates.\
+{\listtext	\uc0\u8259 	}Templates are central to Meteor. Meteor cannot update everything in the HTML DOM; it can only updates the templates (I think). Also, defining a template allows you to do a whole lot more stuff:\
+\pard\tx3100\tx3600\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li3600\fi-3600\pardirnatural
+\ls1\ilvl4\cf0 {\listtext	\uc0\u8259 	}to define an event map in Meteor for that template. \
+{\listtext	\uc0\u8259 	}to define Javascript functions that reactively push information into the template, and update automatically. For example, in the HTML file, '\{\{type\}\}' is an 'expression' defined by the Template.experiment.type function. This function is reactive!\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Why did I use Meteor streams? Why didn't I store everything on the database? Why did I use both the database and streams?\
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Meteor streams is very useful for the chat messages since we don't want to store the messages in a database on the server.\
+{\listtext	\uc0\u8259 	}However, I think I was mistaken to use it to send the experiment changes between clients since they are also stored on the server database. Meteor automatically pushes database changes to the client, so I didn't also need streams to send those changes.\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}What did I do wrong?\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Don't need to use streams to send experiment changes between clients. Meteor automatically pushes database changes to clients.\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}What could be better?\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}All the repeated code in the time and experiment parts. Much of the code defining the time experiment is exactly the same as the code defining the distance experiment. I really should have fixed this earlier; it's pretty terrible right now but I never got around to fixing it. You will need to define higher level functions that encompass the overlap in code.\
+{\listtext	\uc0\u8259 	}Get rid of the 'select' buttons when choosing from a drop down list. I tried this and used a jQuery click event linked to the drop down list to trigger the update function. Unfortunately, this didn't work because the update function ran when you opened the drop down list.\
+{\listtext	\uc0\u8259 	}It needs to be more intuitive. For example, users don't realise that you can click the progress bars. More user testing is required.\
+{\listtext	\uc0\u8259 	}It's too 'handcrafted'. This is fine for a first example, but eventually we want to make a framework from which lots of experiment interfaces can be designed easily.\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}What security issues are there?\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Clients can send unlimited amounts of data through designStream to other clients. We need to add a Meteor Streams filter that restricts the length of the message. It will be similar to the filter for the chatStream. \
+{\listtext	\uc0\u8259 	}Clients can send messages through designStream and chatStream as frequently as they wish. We need to restrict how often they can send a message. (This may not be possible: it may be a problem inherent in Meteor Streams.)\
+{\listtext	\uc0\u8259 	}No security about mongoDB/Javascript injection. Need to think if this is possible, and block it where necessary.\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}What's next?\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Designing an override system: one user (eg. a tutor) can take control of the interface and the other users cannot make changes.\
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Disabling other users to make changes to other interfaces or the server DB:\
+\pard\tx2380\tx2880\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2880\fi-2880\pardirnatural
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Basically put in filters on Meteor streams. \
+{\listtext	\uc0\u8259 	}Stop database from updating by storing the tutor's userId in the server DB. Then, when a client calls a method, the userId is checked. \
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}And disabling other user to make changes to his own interface.\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Adding interfaces for other iLabs experiments.\
+{\listtext	\uc0\u8259 	}Making a more general interface that can be customised easily for lots of experiments. One of the problems is that my interface is 'hand-crafted' for the one experiment. Think about using data-driven programming and widgets. \
+{\listtext	\uc0\u8259 	}Creating a function that exports the mongoDB to JSON so that we can send the experiment design to the broker server. This should be pretty easy as mongoDB is very similar to JSON\
+{\listtext	\uc0\u8259 	}Adding user accounts and also integration with Blackboard. Look at the accounts system built into meteor.	\
+{\listtext	\uc0\u8259 	}When users are designing the experiment, they can see who is changing what part of the experiment. \
+{\listtext	\uc0\u8259 	}Have a look at the Google Docs design for inspiration on how to make the DCI better.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \ulnone Please contact me:\
+jameshbailie@gmail.com\
+github.com/jameshbailie}
