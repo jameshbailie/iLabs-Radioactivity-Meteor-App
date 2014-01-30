@@ -9,12 +9,12 @@ ceit.uq.edu.au/users/uqjbaili
 
 
 ##Dependencies
-Meteor
-Node.js
-Npm
-Git
-Meteorite
-Meteor Streams
-Bootstrap v2.3.2 Meteor Package
+-Meteor
+-Node.js
+-Npm
+-Git
+-Meteorite
+-Meteor Streams
+-Bootstrap v2.3.2 Meteor Package
 
-Remove insecure package from Meteor app (added by default).
+-Remove insecure package from Meteor app (added by default).
